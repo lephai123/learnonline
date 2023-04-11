@@ -1,0 +1,22 @@
+{
+  "ThanhToan": [
+    {
+      "name": "Lê quốc phái",
+      "birth": "15/08/2002",
+      "cccd": "123456789123",
+      "phone": "1231231231",
+      "email": "baopowerpoint@gmail.com",
+      "pay": "banking",
+      "id": 3
+    },
+    {
+      "name": "Lê quốc Phái",
+      "birth": "15/08/2002",
+      "cccd": "123456789012",
+      "phone": "1234567890",
+      "email": "lequocphaikql@gmail.com",
+      "pay": "banking",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+<article class="col-xxl-4 col-lg-6 col-md-8 col-sm-12 mx-auto">
+  <h2 class="text-center">Thanh toán khóa học</h2>
+
+  <div class="border">
+    <div class="p-5">
+      <h5 class="text-info">Mở khóa khóa học HTML CSS</h5>
+      <h6 class="text-warning">Bạn sẽ nhận được gì</h6>
+      <ul class="text-muted">
+        <li>Truy cập toàn bộ khóa HTML CSS Pro (Đang phát triển thêm)</li>
+        <li>Hơn 440 bài học</li>
+        <li>Hơn 404 bài tập và thử thách</li>
+        <li>Thực hành 8 dự án thực tế</li>
+        <li>Hơn 196 flashcards</li>
+        <li>Kênh hỏi đáp riêng tư</li>
+        <li>Đáp án cho mọi thử thách</li>
+        <li>Nhận chứng chỉ khi hoàn thành</li>
+        <li>Cập nhật khóa học trong tương lai</li>
+        <li>Mua một lần, học mãi mãi</li>
+      </ul>
+      <p>
+        Sở hữu khóa học HTML CSS đầy đủ và chi tiết nhất bạn có thể tìm thấy
+        trên Internet.
+      </p>
+      <p>
+        Có tới hàng trăm bài tập thực hành sau mỗi bài học và bạn sẽ được làm 8
+        dự án thực tế trong khóa học này.
+      </p>
+      <p>
+        Đã có sẵn hơn 500 bài học (bao gồm video, bài tập, thử thách,
+        flashcards, v.v) Khóa học chưa hoàn thành 100%, dự kiến hoàn thành trong
+        3 tháng tới. Bài học mới được cập nhật mỗi ngày.
+      </p>
+      Giá bán:
+      <b
+        ><del class=""><i>2.499.000đ</i></del></b
+      >
+      <span class="fw-bolder text-danger">1.299.000đ</span>
+      <hr />
+      <p class="text-right">
+        Tổng tiền phải thanh toán:
+        <span class="text-danger fw-bolder">1.299.000đ</span>
+      </p>
+    </div>
+  </div>
+  <div class="p-3 mx-auto">
+    <form action="">
+      <div class="form-group">
+        <!-- tên -->
+        <label for="">Họ và tên:</label>
+        <span ng-show="submitted && !inputValue.name" class="text-danger"
+          >*(Vui lòng nhập tên của bạn).</span
+        >
+        <input
+          type="text"
+          ng-model="inputValue.name"
+          id="input-name"
+          class="form-control"
+          placeholder="Your name..."
+        />
+
+        <!-- ngày sinh -->
+        <label for="">Ngày sinh:</label>
+        <span class="text-danger" ng-show="submitted && !inputValue.birth" 
+          >*(Nhập ngày sinh dd/mm/yyyy)</span
+        >
+        <input type="text" ng-model="inputValue.birth" id="date" class="form-control" placeholder="dd/mm/yyyy"/>
+
+        <!-- Số CCCD -->
+        <label for="">Căn cước công dân:</label>
+        <span class="text-danger" ng-show="submitted && !inputValue.cccd "
+          >*(Nhập đúng định dạng)</span
+        >
+        <input
+          type="text"
+          ng-model="inputValue.cccd"
+          id="national_id"
+          class="form-control"
+          placeholder="National ID include 12 number"
+        />
+
+        <!-- Số điện thoại-->
+        <label for="">Số điện thoại:</label>
+        <span class="text-danger" ng-show="submitted && !inputValue.phone"
+          >*(Vui lòng nhập số điện thoại đúng định dạng).</span
+        >
+        <input
+          type="text"
+          ng-model="inputValue.phone"
+          class="form-control"
+          id="phone"
+          placeholder="Number phone"
+        />
+        <!-- Email-->
+        <label for="">Email:</label>
+        <span class="text-danger" ng-show="submitted && !inputValue.email"
+          >*(Vui lòng nhập email đúng định dạng).</span
+        >
+        <input
+          type="email"
+          ng-model="inputValue.email"
+          id="email"
+          class="form-control"
+          placeholder="@Mail.."
+        />
+        <!-- pay -->
+        <label for="floatingSelect">Lựa chọn hình thức thanh toán.</label>
+<span class="text-danger" ng-show="submitted && !selectValue.pay">Chọn hình thức thanh toán.</span>
+<div class="form-floating">
+  <select ng-model="selectValue.pay"
+          class="form-select"
+          ng-change="showpay()"
+          id="floatingSelect"
+          aria-label="Floating label select example">
+    <option value="">--Thanh toán--</option>
+    <option value="visa">Visa</option>
+    <option value="banking">Chuyển khoản thủ công</option>
+  </select>
+  <label for="floatingSelect">Chọn hình thức thanh toán</label>
+</div>
+
+<div ng-show="selectValue.pay === 'visa'">
+  <div class="pt-4">
+    <input type="text"
+           name=""
+           ng-model="selectValue.cardNumber"
+           class="form-control"
+           placeholder="Số thẻ" />
+    <div class="row">
+      <div class="col-sm-6">
+        <input type="text"
+               ng-model="selectValue.expiration"
+               class="form-control"
+               placeholder="MM/YY" />
+      </div>
+      <div class="col-sm-6">
+        <input type="text"
+               ng-model="selectValue.cvv"
+               class="form-control"
+               placeholder="CCV/CVV" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-show="selectValue.pay === 'banking'">
+  <div class="pt-4">
+    <div class="row">
+      <div class="form-floating col-sm-6">
+        <input type="text"
+               
+               class="form-control"
+               id="exampleFormControlInput1"
+               
+               value="0375616574"
+               readonly />
+        <label for="exampleFormControlInput1" class="form-label">Số tài khoản</label>
+      </div>
+      <div class="form-floating col-sm-6">
+        <input type="text"
+               
+               class="form-control"
+               id="exampleFormControlInput2"
+               
+               value="Le Quoc Phai"
+               readonly />
+        <label for="exampleFormControlInput2" class="form-label">Người thụ hưởng</label>
+      </div>
+      <div class="form-floating col-sm-6">
+        <input type="text"
+               
+               class="form-control"
+               id="exampleFormControlInput3"
+               
+               value="Ngân hành quân đội MBank"
+               readonly
+             />
+             <label for="exampleFormControlInput1" class="form-label"
+               >Ngân hàng thụ hưởng</label
+             >
+           </div>
+           <div class="form-floating col-sm-6">
+             <input
+               type="text"
+               class="form-control"
+               id="exampleFormControlInput1"
+               value="Thanh toán khóa học"
+               readonly
+             />
+             <label for="exampleFormControlInput1" class="form-label"
+               >Nội dung chuyển khoản</label
+             >
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+        <div class="pt-3 text-center">
+          <button type="submit" class="btn btn-success" ng-click="thanhToan()">
+            Thanh toán.
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</article>
+<table border="1" class="table text-center">
+  <tr>
+    <th>Họ và tên</th>
+    <th>Ngày sinh</th>
+    <th>Căn cước</th>
+    <th>Số điện thoại</th>
+    <th>Email</th>
+    <th>Hình thức thanh toán</th>
+    <th></th>
+  </tr>
+  <tr ng-repeat="(x,ds) in danhsach">
+    <td>{{ds.name}}</td>
+    <td>{{ds.birth}}</td>
+    <td>{{ds.cccd}}</td>
+    <td>{{ds.phone}}</td>
+    <td>{{ds.email}}</td>
+    <td>{{ds.pay}}</td>
+    <td><button class="btn" ng-click="onEdit(ds.id)">edit</button></td>
+    <td><button class="btn" ng-click="onDelete(ds.id)">Xóa</button></td>
+  </tr>
+</table>
